@@ -1,12 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71c97931-6f93-4da2-b75c-e0abf7df0a9f" name="Default Changelist" comment="" />
+    <list default="true" id="71c97931-6f93-4da2-b75c-e0abf7df0a9f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sybase-driver-12.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Controller/MapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Controller/MapController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Controller/VisualController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Controller/VisualController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Dao/CategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Dao/CategoryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Dao/VisualDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Dao/VisualDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Service/VisualService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Service/VisualService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/Controller/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/Controller/CategoryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/Controller/MapController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/Controller/MapController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/Controller/VisualController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/Controller/VisualController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/Dao/CategoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/Dao/CategoryDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/Dao/VisualDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/Dao/VisualDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/Service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/Service/CategoryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/Service/VisualService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/Service/VisualService.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -15,6 +48,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -30,14 +66,16 @@
     </option>
   </component>
   <component name="ProjectId" id="1dNsnZY1Ly2E4paAezlcCIR0PTa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/software/nju/util" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -49,6 +87,8 @@
       <recent name="com.software.nju.Model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/software/nju/util" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
@@ -98,12 +138,27 @@
       <workItem from="1592353787837" duration="657000" />
       <workItem from="1592895404971" duration="3485000" />
       <workItem from="1592959775284" duration="18666000" />
-      <workItem from="1593228487991" duration="18661000" />
+      <workItem from="1593228487991" duration="22142000" />
+      <workItem from="1593304547331" duration="26638000" />
+      <workItem from="1593391135923" duration="9350000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -3,6 +3,8 @@ package com.software.nju.Service;
 import com.software.nju.Bean.Visual;
 import com.software.nju.Dao.VisualDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,8 +14,8 @@ public class VisualService {
     @Autowired
     VisualDao visualDao;
 
-    public List<Visual> findVisualByCategory(int category){
-        return visualDao.findVisualsByCategory(category);
+    public Page<Visual> findVisualByCategory(int category, Pageable pageable){
+        return visualDao.findVisualsByCategory(category,  pageable);
     }
 
     public Visual findVisualById(int id){

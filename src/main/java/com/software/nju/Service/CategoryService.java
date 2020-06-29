@@ -17,5 +17,11 @@ public class CategoryService {
     public List<Category> findAll(){
         return categoryDao.findAll();
     }
+    public String save(Category category){
+        return categoryDao.save(category).getId();
+    }
+    public Category getCategory(String id){
+        return categoryDao.getCategoryById(id);
+    }
 
 }

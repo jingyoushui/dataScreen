@@ -86,7 +86,14 @@
             <artifactId>java-jwt</artifactId>
             <version>3.4.0</version>
         </dependency>
-
+        <!--数据库相关-->
+        <dependency>
+            <groupId>com.sybase</groupId>
+            <artifactId>sybase-driver</artifactId>
+            <version>jdbc4</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/sybase-driver-12.jar</systemPath>
+        </dependency>
 
 
     </dependencies>

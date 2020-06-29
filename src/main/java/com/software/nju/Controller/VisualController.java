@@ -10,15 +10,22 @@ import com.software.nju.Model.VisualData;
 import com.software.nju.Model.VisualDetail;
 import com.software.nju.Service.ConfigService;
 import com.software.nju.Service.VisualService;
+import com.software.nju.util.PageModel;
+import com.software.nju.util.SpringbootPageable;
 import com.software.nju.util.UUID;
 import com.software.nju.util.urlConfig;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -46,8 +53,23 @@ public class VisualController {
                               @RequestParam("current")int current,@RequestParam("size")int size){
         Response response = new Response();
 
-        if(true){//权限认证
-            List<Visual> list = visualService.findVisualByCategory(category);
+        SpringbootPageable pageable = new SpringbootPageable();
+        PageModel pm=new PageModel();
+        List<Sort.Order> orders = new ArrayList<Sort.Order>();  //排序
+        orders.add(new Sort.Order(Sort.Direction.DESC, "id"));
+        Sort sort = Sort.by(orders);
+
+        // 开始页
+        pm.setPagenumber(current);
+        // 每页条数
+        pm.setPagesize(size);
+        pm.setSort(sort);
+        pageable.setPage(pm);
+
+
+        if(true){//权限认证 TODO
+            Page<Visual> pagelist = visualService.findVisualByCategory(category,pageable);
+            List<Visual> list = pagelist.getContent();
             VisualData visualData = new VisualData();
             visualData.setCurrent(1).setTotal(20).setSize(10).setPages(10).setHitCount(false)
                     .setSearchCount(true).setRecords(list);
@@ -99,7 +121,6 @@ public class VisualController {
         Object configObject = jsonParam.get("config");
         if(visualObject!=null){
             visualMap = (HashMap) visualObject;
-            System.out.println(visualMap);
             int id = Integer.parseInt(visualMap.get("id").toString());
             Visual visual = visualService.findVisualById(id);
             if(visual!=null){
@@ -109,7 +130,6 @@ public class VisualController {
         }
         if(configObject!=null){
             configMap = (HashMap) configObject;
-            System.out.println(configMap);
             int id = Integer.parseInt(configMap.get("id").toString());
             int visualId = Integer.parseInt(configMap.get("visualId").toString());
             String detail = configMap.get("detail").toString();
@@ -154,8 +174,8 @@ public class VisualController {
 
         Response response = new Response();
         FileData fileData = new FileData();
-        fileData.setLink("http://localhost/IndexImage/"+url);
-        fileData.setDomain("http://localhost/");
+        fileData.setLink("http://localhost:8079/IndexImage/"+url);
+        fileData.setDomain("http://localhost:8079/");
         fileData.setName(url);
         fileData.setOriginalName(url);
         response.setCode(200).setSuccess(true).setMsg("操作成功").setData(fileData);
