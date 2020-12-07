@@ -4,13 +4,6 @@ import org.springframework.data.domain.Sort;
 
 import java.io.Serializable;
 
-/**
- * Created with IntelliJ IDEA.
- *
- * @Auther: lixing
- * @Date: 2020/03/10/下午7:38
- * @Description:分页模型
- */
 
 public class PageModel implements Serializable{
     /**

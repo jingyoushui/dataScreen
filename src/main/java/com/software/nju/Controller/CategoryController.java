@@ -7,8 +7,10 @@ import com.software.nju.Model.Response;
 import com.software.nju.Service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
 
 @Controller
@@ -56,6 +58,39 @@ public class CategoryController {
         Response response = new Response();
         if(category!=null){
             response.setCode(200).setSuccess(true).setMsg("操作成功").setData(category);
+        }
+        return response;
+    }
+    @CrossOrigin
+    @ResponseBody
+    @RequestMapping(value = "/update")
+    public Response update(@RequestBody JSONObject jsonParam){
+        Response response = new Response();
+        String categoryKey = jsonParam.get("categoryKey").toString();
+        String categoryValue = jsonParam.get("categoryValue").toString();
+        String id = jsonParam.get("id").toString();
+        Integer isDeleted = Integer.parseInt(jsonParam.get("isDeleted").toString());
+
+        Category category = categoryService.getCategory(id);
+        if(category!=null){
+            category.setCategoryKey(categoryKey).setCategoryValue(categoryValue)
+                    .setIsDeleted(isDeleted);
+            categoryService.save(category);
+            response.setCode(200).setSuccess(true).setMsg("操作成功").setData(id);
+        }
+
+
+        return response;
+    }
+
+    @CrossOrigin
+    @ResponseBody
+    @RequestMapping(value = "/remove")
+    public Response remove(@RequestParam(name = "ids") String id) {
+        Response response = new Response();
+        String res = categoryService.remove(id);
+        if(res!=null){
+            response.setCode(200).setSuccess(true).setMsg("操作成功").setData(id);
         }
         return response;
     }

@@ -10,9 +10,11 @@ import org.springframework.web.bind.annotation.*;
 import javax.persistence.criteria.CriteriaBuilder;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Controller
+//静海数据库
 @RequestMapping(value = "/api")
 public class SqlController {
     @Autowired
@@ -29,6 +31,7 @@ public class SqlController {
         return null;
     }
 
+    //执行sql语句后之后查询到一个数字的
     @CrossOrigin
     @ResponseBody
     @GetMapping(value = "/getNumber/{sqlUrl}")
@@ -41,6 +44,11 @@ public class SqlController {
             if(sqlBean.getParamList()!=null){
                 param = sqlBean.getParamList().split(",");
             }
+            Date t = new Date();
+            SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+            String date = df.format(t).substring(0,8)+"01 00:00:00.000";
+            //在写sql语句的时候，如果涉及到日期，如查询到目前为止的数据总数，日期部分用#代替，然后在这里替换成当前的时间
+            sqlString = sqlString.replaceFirst("#",date);
             int count  = sqlToBean.getNumber(sqlString);
             map.put("value",count);
 
@@ -52,9 +60,9 @@ public class SqlController {
     @CrossOrigin
     @ResponseBody
     @GetMapping(value = "/getNumbers/{sqlUrl}")
-    public Map<String,Integer> getNumbers(@PathVariable(value = "sqlUrl")String sqlUrl) throws SQLException {
+    public List<HashMap<String,Object>> getNumbers(@PathVariable(value = "sqlUrl")String sqlUrl) throws SQLException {
         SqlBean sqlBean = sqlBeanService.getSqlBeanBySqlUrl(sqlUrl);
-        Map map = new HashMap();
+        List<HashMap<String,Object>> list = new ArrayList<>();
         if(sqlBean!=null){
             List<String> sqlString = new ArrayList<>();
             if(sqlBean.getSqlString()!=null){
@@ -65,14 +73,25 @@ public class SqlController {
             if(sqlBean.getParamList()!=null){
                 param = Arrays.asList(sqlBean.getParamList().split(","));
             }
+            Date t = new Date();
+            SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+            String date = df.format(t).substring(0,8)+"01 00:00:00.000";
+            String sql = "";
+
             for(int i=0;i<sqlString.size();i++){
-                int a = sqlToBean.getNumber(sqlString.get(i));
-                map.put(param.get(i),a);
+                sql = sqlString.get(i).replaceFirst("#",date);
+                System.out.println(sql);
+                int a = sqlToBean.getNumber(sql);
+                HashMap map = new HashMap();
+                map.put("name",param.get(i));
+                map.put("value",a);
+                list.add(map);
             }
         }
-        return map;
+        return list;
     }
 
+    //这个是查询多个字段的，例如sql为select * from 表名
     @CrossOrigin
     @ResponseBody
     @GetMapping(value = "/getList/{sqlUrl}")

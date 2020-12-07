@@ -15,7 +15,7 @@ import java.io.Serializable;
 @Data
 @Accessors(chain = true)
 @Entity
-@Table(name = "blade_visual_category")
+@Table(name="blade_visual_category")
 //可视化分类表
 public class Category implements Serializable {
     @Id
