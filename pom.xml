@@ -34,11 +34,6 @@
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-mongodb</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -81,6 +76,8 @@
             <version>1.2.54</version>
         </dependency>
 
+
+
         <dependency>
             <groupId>com.auth0</groupId>
             <artifactId>java-jwt</artifactId>
@@ -94,7 +91,18 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/lib/sybase-driver-12.jar</systemPath>
         </dependency>
+        <!--c3p0连接池-->
+<!--        <dependency>-->
+<!--            <groupId>com.mchange</groupId>-->
+<!--            <artifactId>c3p0</artifactId>-->
+<!--            <version>0.9.5.2</version>-->
+<!--        </dependency>-->
 
+        <!-- Spring Websocket -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency>
 
     </dependencies>
 
@@ -103,10 +111,16 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
-                    <mainClass>
-                        com.nju.software.TopologySpringApplication
-                    </mainClass>
+                    <includeSystemScope>true</includeSystemScope>
+                    <fork>true</fork>
                 </configuration>
             </plugin>
             <!--            打包时候跳过test-->

@@ -5,6 +5,8 @@ import com.software.nju.Dao.SqlBeanDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class SqlBeanService {
     @Autowired
@@ -12,5 +14,8 @@ public class SqlBeanService {
 
     public SqlBean getSqlBeanBySqlUrl(String url){
         return sqlBeanDao.findSqlBeanBySqlUrl(url);
+    }
+    public List<SqlBean> getAll(){
+        return sqlBeanDao.findAll();
     }
 }

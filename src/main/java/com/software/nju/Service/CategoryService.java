@@ -24,4 +24,8 @@ public class CategoryService {
         return categoryDao.getCategoryById(id);
     }
 
+    public String remove(String id){
+        return categoryDao.removeCategoryById(id);
+    }
+
 }

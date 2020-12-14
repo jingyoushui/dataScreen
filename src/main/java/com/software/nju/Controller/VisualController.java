@@ -14,12 +14,14 @@ import com.software.nju.util.PageModel;
 import com.software.nju.util.SpringbootPageable;
 import com.software.nju.util.UUID;
 import com.software.nju.util.urlConfig;
+import com.sun.prism.shader.DrawEllipse_LinearGradient_REFLECT_AlphaTest_Loader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -117,8 +119,15 @@ public class VisualController {
     public Response update(@RequestBody JSONObject jsonParam){
         Response response = new Response();
         HashMap visualMap,configMap;
-        Object visualObject = jsonParam.get("visual");
-        Object configObject = jsonParam.get("config");
+        Object visualObject = null;
+        if(jsonParam.containsKey("visual")){
+            visualObject = jsonParam.get("visual");
+        }
+        Object configObject = null;
+        if(jsonParam.containsKey("config")){
+            configObject = jsonParam.get("config");
+        }
+
         if(visualObject!=null){
             visualMap = (HashMap) visualObject;
             int id = Integer.parseInt(visualMap.get("id").toString());
@@ -155,7 +164,10 @@ public class VisualController {
 
 
         String name = uuid.getUUID();
-        String url = name+".jpg";
+        String btype = blobFile.getContentType();
+        String type = btype.substring(6,btype.length());
+        System.out.println(type);
+        String url = name+"."+type;
         File f = null;
         f = new File(fileurl+url);
         try (InputStream in  = blobFile.getInputStream(); OutputStream os = new FileOutputStream(f)){
@@ -174,8 +186,10 @@ public class VisualController {
 
         Response response = new Response();
         FileData fileData = new FileData();
-        fileData.setLink("http://localhost:8079/IndexImage/"+url);
-        fileData.setDomain("http://localhost:8079/");
+//        fileData.setLink("http://130.39.110.118:8079/IndexImage/"+url);
+//        fileData.setDomain("http://130.39.110.118:8079/");
+        fileData.setLink("/IndexImage/"+url);
+        fileData.setDomain("");
         fileData.setName(url);
         fileData.setOriginalName(url);
         response.setCode(200).setSuccess(true).setMsg("操作成功").setData(fileData);
@@ -210,6 +224,72 @@ public class VisualController {
 
 
         return  response;
+    }
+
+    //更改大屏的详细信息
+    @CrossOrigin
+    @ResponseBody
+    @RequestMapping(value = "/update2")
+    public Response update2Visual(@RequestBody JSONObject jsonParam) {
+        Response response = new Response();
+        HashMap visual1 = (HashMap)jsonParam.get("visual");
+        Integer id = Integer.parseInt(visual1.get("id").toString());
+        System.out.println(id);
+        Visual visual  = visualService.findVisualById(id);
+        System.out.println(visual);
+        if(visual!=null){
+            visual.setPassword(visual1.get("password").toString())
+                    .setCategory(Integer.parseInt(visual1.get("category").toString()))
+                    .setTitle(visual1.get("title").toString())
+                    .setStatus(Integer.parseInt(visual1.get("status").toString()));
+            visualService.saveVisual(visual);
+            response.setCode(200).setSuccess(true).setMsg("操作成功").setData(id);
+        }
+
+        return response;
+    }
+
+    @CrossOrigin
+    @ResponseBody
+    @RequestMapping(value = "/remove")
+    @Transactional
+    public Response remove(@RequestParam(name = "ids") Integer id) {
+        Response response = new Response();
+        int res = visualService.remove(id);
+        if(res!=-1){
+            configService.remove(id);
+            response.setCode(200).setSuccess(true).setMsg("操作成功").setData(id);
+        }
+        return response;
+    }
+
+    @CrossOrigin
+    @ResponseBody
+    @RequestMapping(value = "/copy")
+    @Transactional
+    public Response copy(@RequestParam(name = "id") Integer id) {
+        Response response = new Response();
+        Visual visual = visualService.findVisualById(id);
+        Visual visual1 = new Visual();
+        int vid = (int) (System.currentTimeMillis() / 1000);
+        //可以改成对象深拷贝，但是也麻烦
+        visual1.setId(vid).setTitle(visual.getTitle()+"副本").setBackgroundUrl(visual.getBackgroundUrl())
+            .setCategory(visual.getCategory()).setPassword(visual.getPassword()).setCreateUser(visual.getCreateUser())
+            .setCreateDept(visual.getCreateDept()).setCreateTime(visual.getCreateTime()).setUpdateUser(visual.getUpdateUser())
+            .setUpdateTime(visual.getUpdateTime()).setStatus(visual.getStatus()).setIsDeleted(visual.getIsDeleted());
+
+        int res1 = visualService.saveVisual(visual1);
+        Config config = configService.findConfigByVisual(id);
+        Config config1 = new Config();
+
+        config1.setId(vid).setVisualId(vid).setDetail(config.getDetail()).setComponent(config.getComponent());
+        int res2 = configService.saveConfig(config1);
+        if(res1!=-1&&res2!=-1){
+            response.setCode(200).setSuccess(true).setMsg("操作成功").setData(vid);
+        }
+        return response;
+
+
     }
 
 }

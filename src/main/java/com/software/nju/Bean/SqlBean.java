@@ -17,6 +17,10 @@ import java.util.List;
 @Accessors(chain = true)
 @Entity
 @Table()
+
+//这个类自动生成数据库表之后，需要将sqlString字段属性变成text，在数据库中执行下面语句
+//use vuedata;
+//alter table sql_bean modify column Sql_string text;
 public class SqlBean {
     @Id
     private String id;
@@ -29,5 +33,9 @@ public class SqlBean {
     private String sqlDes;
     //sql对应的参数列表,如1,2,3,4
     private String  paramList;
+    //api是静海，GYapi是信访库
+    private String sqlApi;
+
+    private String sqlType;
 
 }

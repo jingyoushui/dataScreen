@@ -10,6 +10,7 @@ import com.software.nju.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -72,6 +73,35 @@ public class MapController {
         Response response = new Response();
         if(map!=null){
             response.setCode(200).setSuccess(true).setMsg("操作成功").setData(map);
+        }
+        return response;
+    }
+    @CrossOrigin
+    @ResponseBody
+    @RequestMapping(value = "/update")
+    public Response updateMap(@RequestBody JSONObject jsonParam) {
+       String name =  jsonParam.get("name").toString();
+       String data = jsonParam.get("data").toString();
+       String id = jsonParam.get("id").toString();
+       Map map = mapService.findMapDetail(id);
+       Response response = new Response();
+       if(map!=null){
+           map.setName(name).setData(data);
+           mapService.save(map);
+           response.setCode(200).setSuccess(true).setMsg("操作成功").setData(id);
+       }
+       return response;
+    }
+
+    @CrossOrigin
+    @ResponseBody
+    @RequestMapping(value = "/remove")
+    @Transactional
+    public Response remove(@RequestParam(name = "ids") String id) {
+        Response response = new Response();
+        String res = mapService.remove(id);
+        if(res!=null){
+            response.setCode(200).setSuccess(true).setMsg("操作成功").setData(id);
         }
         return response;
     }

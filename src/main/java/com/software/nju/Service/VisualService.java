@@ -7,6 +7,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
 
 @Service
@@ -24,5 +25,8 @@ public class VisualService {
 
     public Integer saveVisual(Visual visual){
         return visualDao.save(visual).getId();
+    }
+    public Integer remove(Integer id){
+        return visualDao.removeVisualById(id);
     }
 }

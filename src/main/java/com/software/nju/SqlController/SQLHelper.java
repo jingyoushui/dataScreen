@@ -1,5 +1,7 @@
 package com.software.nju.SqlController;
 
+import com.software.nju.SqlController.connection.ConnectionPool;
+import com.software.nju.SqlController.connection.ConnectionPoolUtils;
 import org.springframework.stereotype.Component;
 
 import java.sql.Statement;
@@ -12,23 +14,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class SQLHelper {
-    /**
-     * 驱动
-     */
-    public static String driver = "com.sybase.jdbc4.jdbc.SybDriver";
-    /**
-     * 连接字符串
-     */
-    public static String url = "jdbc:sybase:Tds:130.20.1.1:5000/JUDGE?charset=cp936";
-    /**
-     * 用户名
-     */
-    public static String user = "fymis";
-    /**
-     * 密码
-     */
-    public static String password = "nju362225L572L2L55";
 
+    //静海数据库
+    static ConnectionPool JHconnPool= ConnectionPoolUtils.GetPoolInstance();//单例模式创建连接池对象
+    //高院信访集中库
+    static ConnectionPool GYconnPool= ConnectionPoolUtils.GetGYPoolInstance();//单例模式创建连接池对象
+    private static Logger logger = Logger.getLogger(SQLHelper.class.getName());
     /**
      * 不允许实例化该类
      */
@@ -42,42 +33,31 @@ public class SQLHelper {
      *
      * @return 数据库连接
      */
-    public static Connection getConnection() {
-        try {
-            // 获取驱动,这里使用的是 sqljdbc_1.2.2828.100_chs.exe,不同版本的驱动,语句有所不同
-            Class.forName(driver);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(SQLHelper.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        try {
-            return DriverManager.getConnection(url, user, password);
-        } catch (SQLException ex) {
-            Logger.getLogger(SQLHelper.class.getName()).log(Level.SEVERE, null, ex);
-            return null;
-        }
-    }
-
-    /**
-     * 获取一个 Statement
-     * 该 Statement 已经设置数据集 可以滚动,可以更新
-     *
-     * @return 如果获取失败将返回 null,调用时记得检查返回值
-     */
-    public static Statement getStatement() {
-        Connection conn = getConnection();
-        if (conn == null) {
-            return null;
-        }
-        try {
-            return (Statement) conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,
-                    ResultSet.CONCUR_UPDATABLE);
-            // 设置数据集可以滚动,可以更新
-        } catch (SQLException ex) {
-            Logger.getLogger(SQLHelper.class.getName()).log(Level.SEVERE, null, ex);
-            close(conn);
+    public static Connection getJHConnection() {
+        try{
+            Connection connection = JHconnPool.getConnection();
+            logger.info("获取静海连接："+connection);
+            return connection;
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return null;
+
     }
+
+    //获取高院的数据库连接
+    public static Connection getGYConnection() {
+        try{
+            Connection connection = GYconnPool.getConnection();
+            logger.info("获取高院连接："+connection);
+            return connection;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+
+    }
+
 
     /**
      * 获取一个 Statement
@@ -91,242 +71,39 @@ public class SQLHelper {
             return null;
         }
         try {
-            return (Statement) conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+            return (Statement) conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,
+                    ResultSet.CONCUR_UPDATABLE);
             // 设置数据集可以滚动,可以更新
         } catch (SQLException ex) {
-            Logger.getLogger(SQLHelper.class.getName()).log(Level.SEVERE, null, ex);
+            logger.warning(ex.toString());
             return null;
         }
     }
 
-    /**
-     * 获取一个带参数的 PreparedStatement
-     * 该 PreparedStatement 已经设置数据集 可以滚动,可以更新
-     *
-     * @param cmdText   需要 ? 参数的 SQL 语句
-     * @param cmdParams SQL 语句的参数表
-     * @return 如果获取失败将返回 null,调用时记得检查返回值
-     */
-    public static PreparedStatement getPreparedStatement(String cmdText, Object... cmdParams) {
-        Connection conn = getConnection();
-        if (conn == null) {
-            return null;
-        }
-        PreparedStatement pstmt = null;
-        try {
-            pstmt = conn.prepareStatement(cmdText, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-            int i = 1;
-            for (Object item : cmdParams) {
-                pstmt.setObject(i, item);
-                i++;
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-            close(conn);
-        }
-        return pstmt;
-    }
-
-    /**
-     * 获取一个带参数的 PreparedStatement
-     * 该 PreparedStatement 已经设置数据集 可以滚动,可以更新
-     *
-     * @param conn      数据库连接
-     * @param cmdText   需要 ? 参数的 SQL 语句
-     * @param cmdParams SQL 语句的参数表
-     * @return 如果获取失败将返回 null,调用时记得检查返回值
-     */
-    public static PreparedStatement getPreparedStatement(Connection conn, String cmdText, Object... cmdParams) {
-        if (conn == null) {
-            return null;
-        }
-        PreparedStatement pstmt = null;
-        try {
-            pstmt = conn.prepareStatement(cmdText, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-            int i = 1;
-            for (Object item : cmdParams) {
-                pstmt.setObject(i, item);
-                i++;
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-            close(pstmt);
-        }
-        return pstmt;
-    }
-
-    /**
-     * 执行 SQL 语句,返回结果为整型
-     * 主要用于执行非查询语句
-     *
-     * @param cmdText SQL 语句
-     * @return 非负数:正常执行; -1:执行错误; -2:连接错误
-     */
-    public static int ExecSql(String cmdText) {
-        Statement stmt = getStatement();
-        if (stmt == null) {
-            return -2;
-        }
-        int i;
-        try {
-            i = ((java.sql.Statement) stmt).executeUpdate(cmdText);
-        } catch (SQLException ex) {
-            Logger.getLogger(SQLHelper.class.getName()).log(Level.SEVERE, null,
-                    ex);
-            i = -1;
-        }
-        closeConnection(stmt);
-        return i;
-    }
-
-    /**
-     * 执行 SQL 语句,返回结果为整型
-     * 主要用于执行非查询语句
-     *
-     * @param cmdText SQL 语句
-     * @return 非负数:正常执行; -1:执行错误; -2:连接错误
-     */
-    public static int ExecSql(Connection conn, String cmdText) {
-        Statement stmt = getStatement(conn);
-        if (stmt == null) {
-            return -2;
-        }
-        int i;
-        try {
-            i = ((java.sql.Statement) stmt).executeUpdate(cmdText);
-        } catch (SQLException ex) {
-            Logger.getLogger(SQLHelper.class.getName()).log(Level.SEVERE, null,
-                    ex);
-            i = -1;
-        }
-        close(stmt);
-        return i;
-    }
-
-    /**
-     * 执行 SQL 语句,返回结果为整型
-     * 主要用于执行非查询语句
-     *
-     * @param cmdText   需要 ? 参数的 SQL 语句
-     * @param cmdParams SQL 语句的参数表
-     * @return 非负数:正常执行; -1:执行错误; -2:连接错误
-     */
-    public static int ExecSql(String cmdText, Object... cmdParams) {
-        PreparedStatement pstmt = getPreparedStatement(cmdText, cmdParams);
-        if (pstmt == null) {
-            return -2;
-        }
-        int i;
-        try {
-            i = pstmt.executeUpdate();
-        } catch (SQLException ex) {
-            Logger.getLogger(SQLHelper.class.getName()).log(Level.SEVERE, null,
-                    ex);
-            i = -1;
-        }
-        closeConnection(pstmt);
-        return i;
-    }
-
-    /**
-     * 执行 SQL 语句,返回结果为整型
-     * 主要用于执行非查询语句
-     *
-     * @param conn      数据库连接
-     * @param cmdText   需要 ? 参数的 SQL 语句
-     * @param cmdParams SQL 语句的参数表
-     * @return 非负数:正常执行; -1:执行错误; -2:连接错误
-     */
-    public static int ExecSql(Connection conn, String cmdText, Object... cmdParams) {
-        PreparedStatement pstmt = getPreparedStatement(conn, cmdText, cmdParams);
-        if (pstmt == null) {
-            return -2;
-        }
-        int i;
-        try {
-            i = pstmt.executeUpdate();
-        } catch (SQLException ex) {
-            Logger.getLogger(SQLHelper.class.getName()).log(Level.SEVERE, null, ex);
-            i = -1;
-        }
-        close(pstmt);
-        return i;
-    }
-
-    /**
-     * 返回结果集的第一行的一列的值,其他忽略
-     *
-     * @param cmdText SQL 语句
-     * @return
-     */
-    public static Object ExecScalar(String cmdText) {
-        ResultSet rs = getResultSet(cmdText);
-        Object obj = buildScalar(rs);
-        closeConnection(rs);
-        return obj;
-    }
-
-    /**
-     * 返回结果集的第一行的一列的值,其他忽略
-     *
-     * @param conn    数据库连接
-     * @param cmdText SQL 语句
-     * @return
-     */
-    public static Object ExecScalar(Connection conn, String cmdText) {
-        ResultSet rs = getResultSet(conn, cmdText);
-        Object obj = buildScalar(rs);
-        closeEx(rs);
-        return obj;
-    }
-
-    /**
-     * 返回结果集的第一行的一列的值,其他忽略
-     *
-     * @param cmdText   需要 ? 参数的 SQL 语句
-     * @param cmdParams SQL 语句的参数表
-     * @return
-     */
-    public static Object ExecScalar(String cmdText, Object... cmdParams) {
-        ResultSet rs = getResultSet(cmdText, cmdParams);
-        Object obj = buildScalar(rs);
-        closeConnection(rs);
-        return obj;
-    }
-
-    /**
-     * 返回结果集的第一行的一列的值,其他忽略
-     *
-     * @param conn      数据库连接
-     * @param cmdText   需要 ? 参数的 SQL 语句
-     * @param cmdParams SQL 语句的参数表
-     * @return
-     */
-    public static Object ExecScalar(Connection conn, String cmdText, Object... cmdParams) {
-        ResultSet rs = getResultSet(conn, cmdText, cmdParams);
-        Object obj = buildScalar(rs);
-        closeEx(rs);
-        return obj;
-    }
 
     /**
      * 返回一个 ResultSet
      *
+     * @param conn
      * @param cmdText SQL 语句
      * @return
      */
-    public static ResultSet getResultSet(String cmdText) {
-        Statement stmt = getStatement();
+    public static ResultSet getGYResultSet(Connection conn, String cmdText) {
+        Statement stmt = getStatement(conn);
+        ResultSet res = null;
+//        logger.info("使用高院连接："+conn.toString());
         if (stmt == null) {
+            logger.info("高院stmt为空");
             return null;
         }
         try {
-            return ((java.sql.Statement) stmt).executeQuery(cmdText);
+            res =  ((java.sql.Statement) stmt).executeQuery(cmdText);
         } catch (SQLException ex) {
-            Logger.getLogger(SQLHelper.class.getName()).log(Level.SEVERE, null, ex);
-            closeConnection(stmt);
+            logger.warning(ex.toString());
+        }finally {
+            closeGYConnection(conn);
         }
-        return null;
+        return res;
     }
 
     /**
@@ -336,265 +113,66 @@ public class SQLHelper {
      * @param cmdText SQL 语句
      * @return
      */
-    public static ResultSet getResultSet(Connection conn, String cmdText) {
+    public static ResultSet getJHResultSet(Connection conn, String cmdText) {
         Statement stmt = getStatement(conn);
+        ResultSet res = null;
+//        logger.info("使用静海连接："+conn.toString());
         if (stmt == null) {
+            logger.info("静海stmt为空");
             return null;
         }
         try {
-            return ((java.sql.Statement) stmt).executeQuery(cmdText);
+            res =  ((java.sql.Statement) stmt).executeQuery(cmdText);
         } catch (SQLException ex) {
-            Logger.getLogger(SQLHelper.class.getName()).log(Level.SEVERE, null, ex);
-            close(stmt);
+            logger.warning(ex.toString());
+        }finally {
+            closeJHConnection(conn);
         }
-        return null;
-    }
-
-    /**
-     * 返回一个 ResultSet
-     *
-     * @param cmdText   需要 ? 参数的 SQL 语句
-     * @param cmdParams SQL 语句的参数表
-     * @return
-     */
-    public static ResultSet getResultSet(String cmdText, Object... cmdParams) {
-        PreparedStatement pstmt = getPreparedStatement(cmdText, cmdParams);
-        if (pstmt == null) {
-            return null;
-        }
-        try {
-            return pstmt.executeQuery();
-        } catch (SQLException ex) {
-            Logger.getLogger(SQLHelper.class.getName()).log(Level.SEVERE, null, ex);
-            closeConnection(pstmt);
-        }
-        return null;
-    }
-
-    /**
-     * 返回一个 ResultSet
-     *
-     * @param conn      数据库连接
-     * @param cmdText   需要 ? 参数的 SQL 语句
-     * @param cmdParams SQL 语句的参数表
-     * @return
-     */
-    public static ResultSet getResultSet(Connection conn, String cmdText, Object... cmdParams) {
-        PreparedStatement pstmt = getPreparedStatement(conn, cmdText, cmdParams);
-        if (pstmt == null) {
-            return null;
-        }
-        try {
-            return pstmt.executeQuery();
-        } catch (SQLException ex) {
-            Logger.getLogger(SQLHelper.class.getName()).log(Level.SEVERE, null, ex);
-            close(pstmt);
-        }
-        return null;
-    }
-
-    public static Object buildScalar(ResultSet rs) {
-        if (rs == null) {
-            return null;
-        }
-        Object obj = null;
-        try {
-            if (rs.next()) {
-                obj = rs.getObject(1);
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(SQLHelper.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return obj;
+        return res;
     }
 
 
-    /**
-     * 获取一个具有更新功能的数据模型 如果只要读取数据，就不要用它了
-     * @param cmdText 能返回一个数据集的查询SQL 语句
-     * @return 表格数据模型
-     *
-     *
-     * DataSet 没有找到在哪个包中,因为暂时用不到所以省略此方法
-
-    public static DataSet getDataSet(String cmdText)
-    {
-    Statement stmt = getStatement();
-    DataSet dbc = new DataSet();
-    if (stmt == null)
-    {
-    dbc.code = -2;
-    return dbc;
-    }
-    try
-    {
-    // 查询语句
-    dbc.rs = stmt.executeQuery(cmdText);
-    dbc.model = buildTableModel(dbc.rs);
-    dbc.code = dbc.model.getRowCount();
-    } catch (SQLException ex)
-    {
-    Logger.getLogger(SQLHelper.class.getName()).log(Level.SEVERE, null, ex);
-    dbc.code = -1;
-    }
-    return dbc;
-    }
-     */
-
-    /**
-     * 获取一个具有更新功能的数据模型 如果只要读取数据，就不要用它了
-     * @param conn 数据库连接
-     * @param cmdText 能返回一个数据集的查询SQL 语句
-     * @return 表格数据模型
-     *
-     * 同上一个方法
-
-    public static DataSet getDataSet(Connection conn, String cmdText)
-    {
-    Statement stmt = getStatement(conn);
-    DataSet dbc = new DataSet();
-    if (stmt == null)
-    {
-    dbc.code = -2;
-    return dbc;
-    }
-    try
-    {
-    // 查询语句
-    dbc.rs = stmt.executeQuery(cmdText);
-    dbc.model = buildTableModel(dbc.rs);
-    dbc.code = dbc.model.getRowCount();
-    } catch (SQLException ex)
-    {
-    Logger.getLogger(SQLHelper.class.getName()).log(Level.SEVERE, null, ex);
-    dbc.code = -1;
-    }
-    return dbc;
-    }
-     */
-    /**
-     * 获取一个具有更新功能的数据模型 如果只要读取数据，就不要用它了
-     * @param cmdText 需要 ? 参数的 SQL 语句
-     * @param cmdParams SQL 语句的参数表
-     * @return 表格数据模型
-     *
-     *
-     * 同上一个方法     *
-     *
-
-    public static DataSet getDataSet(String cmdText, Object... cmdParams)
-    {
-    PreparedStatement pstmt = getPreparedStatement(cmdText, cmdParams);
-    DataSet dbc = new DataSet();
-    if (pstmt == null)
-    {
-    dbc.code = -2;
-    return dbc;
-    }
-    try
-    {
-    // 查询语句
-    dbc.rs = pstmt.executeQuery();
-    dbc.model = buildTableModel(dbc.rs);
-    dbc.code = dbc.model.getRowCount();
-    } catch (SQLException ex)
-    {
-    Logger.getLogger(SQLHelper.class.getName()).log(Level.SEVERE, null, ex);
-    dbc.code = -1;
-    }
-    return dbc;
-    }
-
-     */
-    /**
-     * 获取一个具有更新功能的数据模型 如果只要读取数据，就不要用它了
-     *
-     * @param conn      数据库连接
-     * @param cmdText   需要 ? 参数的 SQL 语句
-     * @param cmdParams SQL 语句的参数表
-     * @return 表格数据模型
-     * <p>
-     * <p>
-     * 同上
-     * <p>
-     * <p>
-     * public static DataSet getDataSet(Connection conn, String cmdText, Object... cmdParams)
-     * {
-     * PreparedStatement pstmt = getPreparedStatement(conn, cmdText, cmdParams);
-     * DataSet dbc = new DataSet();
-     * if (pstmt == null)
-     * {
-     * dbc.code = -2;
-     * return dbc;
-     * }
-     * try
-     * {
-     * // 查询语句
-     * dbc.rs = pstmt.executeQuery();
-     * dbc.model = buildTableModel(dbc.rs);
-     * dbc.code = dbc.model.getRowCount();
-     * } catch (SQLException ex)
-     * {
-     * Logger.getLogger(SQLHelper.class.getName()).log(Level.SEVERE, null, ex);
-     * dbc.code = -1;
-     * }
-     * return dbc;
-     * }
-     */
-    private static void close(Object obj) {
+    private static void closeJHConnection(Object obj) {
         if (obj == null) {
             return;
         }
         try {
             if (obj instanceof Statement) {
-                ((Connection) obj).close();
+//                ((java.sql.Statement) obj).getConnection().close();
+                JHconnPool.returnConnection(((java.sql.Statement) obj).getConnection());
             } else if (obj instanceof PreparedStatement) {
-                ((PreparedStatement) obj).close();
+//                ((PreparedStatement) obj).getConnection().close();
+                JHconnPool.returnConnection(((PreparedStatement) obj).getConnection());
             } else if (obj instanceof ResultSet) {
-                ((ResultSet) obj).close();
+//                ((ResultSet) obj).getStatement().getConnection().close();
+                JHconnPool.returnConnection(((ResultSet) obj).getStatement().getConnection());
             } else if (obj instanceof Connection) {
-                ((Connection) obj).close();
+//                ((Connection) obj).close();
+                JHconnPool.returnConnection((Connection) obj);// 连接使用完后释放连接到连接池
             }
+//            logger.info("关闭静海连接："+obj);
         } catch (SQLException ex) {
-            Logger.getLogger(SQLHelper.class.getName()).log(Level.SEVERE, null, ex);
+            logger.warning(ex.toString());
         }
     }
 
-    private static void closeEx(Object obj) {
+    private static void closeGYConnection(Object obj) {
         if (obj == null) {
             return;
         }
         try {
             if (obj instanceof Statement) {
-                ((Connection) obj).close();
+                GYconnPool.returnConnection(((java.sql.Statement) obj).getConnection());
             } else if (obj instanceof PreparedStatement) {
-                ((PreparedStatement) obj).close();
+                GYconnPool.returnConnection(((PreparedStatement) obj).getConnection());
             } else if (obj instanceof ResultSet) {
-                ((ResultSet) obj).getStatement().close();
+                GYconnPool.returnConnection(((ResultSet) obj).getStatement().getConnection());
             } else if (obj instanceof Connection) {
-                ((Connection) obj).close();
+                GYconnPool.returnConnection((Connection) obj);// 连接使用完后释放连接到连接池
             }
+//            logger.info("关闭高院连接："+obj);
         } catch (SQLException ex) {
-            Logger.getLogger(SQLHelper.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-
-    private static void closeConnection(Object obj) {
-        if (obj == null) {
-            return;
-        }
-        try {
-            if (obj instanceof Statement) {
-                ((java.sql.Statement) obj).getConnection().close();
-            } else if (obj instanceof PreparedStatement) {
-                ((PreparedStatement) obj).getConnection().close();
-            } else if (obj instanceof ResultSet) {
-                ((ResultSet) obj).getStatement().getConnection().close();
-            } else if (obj instanceof Connection) {
-                ((Connection) obj).close();
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(SQLHelper.class.getName()).log(Level.SEVERE, null, ex);
+            logger.warning(ex.toString());
         }
     }
 }

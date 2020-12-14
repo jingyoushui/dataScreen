@@ -9,4 +9,6 @@ import java.util.List;
 public interface CategoryDao extends JpaRepository<Category,String> {
 
     Category getCategoryById(String id);
+
+    String removeCategoryById(String id);
 }

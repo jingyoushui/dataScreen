@@ -5,13 +5,7 @@ import org.springframework.data.domain.Sort;
 
 import java.io.Serializable;
 
-/**
- * Created with IntelliJ IDEA.
- *
- * @Auther: lixing
- * @Date: 2020/03/10/下午3:18
- * @Description:分页公共类
- */
+
 
 public class SpringbootPageable implements Serializable,Pageable{
     /**

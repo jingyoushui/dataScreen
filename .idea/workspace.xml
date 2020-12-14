@@ -2,24 +2,56 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71c97931-6f93-4da2-b75c-e0abf7df0a9f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/sybase-driver-12.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/config/logging-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Bean/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Bean/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Bean/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Bean/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Bean/SqlBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Bean/SqlBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Controller/CategoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Controller/MapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Controller/MapController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Controller/VisualController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Controller/VisualController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Dao/CategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Dao/CategoryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Dao/ConfigDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Dao/ConfigDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Dao/MapDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Dao/MapDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Dao/VisualDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Dao/VisualDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Service/ConfigService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Service/ConfigService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Service/MapService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Service/MapService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Service/SqlBeanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Service/SqlBeanService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Service/VisualService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Service/VisualService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/SqlController/SQLHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/SqlController/SQLHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/SqlController/SQLToBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/SqlController/SQLToBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/SqlController/SqlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/SqlController/SqlController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/util/PageModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/util/PageModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/util/SpringbootPageable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/util/SpringbootPageable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/util/urlConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/util/urlConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/Bean/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/Bean/Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/Bean/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/Bean/Map.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/Bean/SqlBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/Bean/SqlBean.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/Controller/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/Controller/CategoryController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/Controller/MapController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/Controller/MapController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/Controller/VisualController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/Controller/VisualController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/Dao/CategoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/Dao/CategoryDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/Dao/ConfigDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/Dao/ConfigDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/Dao/MapDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/Dao/MapDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/Dao/VisualDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/Dao/VisualDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/Service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/Service/CategoryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/Service/ConfigService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/Service/ConfigService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/Service/MapService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/Service/MapService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/Service/SqlBeanService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/Service/SqlBeanService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/Service/VisualService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/Service/VisualService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/SqlController/SQLHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/SqlController/SQLHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/SqlController/SQLToBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/SqlController/SQLToBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/SqlController/SqlController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/SqlController/SqlController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/util/PageModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/util/PageModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/util/SpringbootPageable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/util/SpringbootPageable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/util/urlConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/util/urlConfig.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,12 +77,20 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -68,6 +108,8 @@
   <component name="ProjectId" id="1dNsnZY1Ly2E4paAezlcCIR0PTa" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -75,7 +117,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/software/nju/util" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HeBeiScreen/baseframework" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -87,6 +129,8 @@
       <recent name="com.software.nju.Model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/config" />
+      <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/src/main/java/com/software/nju/util" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -104,7 +148,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.DataScreenApplication">
+    <configuration name="T" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="T" />
+      <module name="dataScreen" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DataScreenApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="dataScreen" />
       <extension name="coverage">
@@ -121,8 +172,19 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.DataScreenApplication" />
+        <item itemvalue="Application.T" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -140,7 +202,51 @@
       <workItem from="1592959775284" duration="18666000" />
       <workItem from="1593228487991" duration="22142000" />
       <workItem from="1593304547331" duration="26638000" />
-      <workItem from="1593391135923" duration="9350000" />
+      <workItem from="1593391135923" duration="18574000" />
+      <workItem from="1593480848920" duration="677000" />
+      <workItem from="1593508877100" duration="1588000" />
+      <workItem from="1593612437265" duration="1085000" />
+      <workItem from="1593586271340" duration="147000" />
+      <workItem from="1593588647246" duration="750000" />
+      <workItem from="1593595964384" duration="1121000" />
+      <workItem from="1593652027461" duration="261000" />
+      <workItem from="1593652909278" duration="792000" />
+      <workItem from="1593654267493" duration="7872000" />
+      <workItem from="1593999227555" duration="4340000" />
+      <workItem from="1594082721913" duration="8531000" />
+      <workItem from="1594113583978" duration="114000" />
+      <workItem from="1594171590438" duration="745000" />
+      <workItem from="1594172728961" duration="3889000" />
+      <workItem from="1594178071250" duration="620000" />
+      <workItem from="1594215171384" duration="1274000" />
+      <workItem from="1594256380411" duration="601000" />
+      <workItem from="1594276048934" duration="650000" />
+      <workItem from="1594365840769" duration="119000" />
+      <workItem from="1594366241877" duration="6456000" />
+      <workItem from="1594373377437" duration="1322000" />
+      <workItem from="1594599663885" duration="28000" />
+      <workItem from="1594609721322" duration="4343000" />
+      <workItem from="1594879593675" duration="5148000" />
+      <workItem from="1594894563163" duration="801000" />
+      <workItem from="1594896179304" duration="4092000" />
+      <workItem from="1594953261724" duration="1078000" />
+      <workItem from="1594977022101" duration="885000" />
+      <workItem from="1595217290747" duration="13000" />
+      <workItem from="1595669937403" duration="118000" />
+      <workItem from="1596590964355" duration="5062000" />
+      <workItem from="1603779903348" duration="639000" />
+      <workItem from="1603795307830" duration="10000" />
+      <workItem from="1605244421949" duration="164000" />
+      <workItem from="1607322140941" duration="5021000" />
+      <workItem from="1607346749632" duration="3000" />
+      <workItem from="1607390258605" duration="30000" />
+      <workItem from="1607392815920" duration="840000" />
+      <workItem from="1607416040639" duration="2166000" />
+      <workItem from="1607475356508" duration="29000" />
+      <workItem from="1607480243194" duration="19904000" />
+      <workItem from="1607563310831" duration="3002000" />
+      <workItem from="1607647240019" duration="6354000" />
+      <workItem from="1607849652061" duration="16296000" />
     </task>
     <servers />
   </component>
