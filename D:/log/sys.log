@@ -1750,3 +1750,7 @@
 2020-12-14 14:37:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
 2020-12-14 14:37:15 [http-nio-8211-exec-6] INFO  com.software.nju.WebSocket.WebsocketServerEndpoint -onClose >> 链接关闭
 2020-12-14 14:37:15 [http-nio-8211-exec-6] INFO  com.software.nju.WebSocket.WebsocketServerEndpoint -链接关闭，当前在线人数：0
+2020-12-14 14:56:31 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler -Shutting down ExecutorService 'taskScheduler'
+2020-12-14 14:56:31 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-14 14:56:31 [SpringContextShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-14 14:56:31 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource -{dataSource-1} closed
