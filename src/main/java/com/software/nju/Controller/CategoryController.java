@@ -83,6 +83,7 @@ public class CategoryController {
         return response;
     }
 
+    @Transactional
     @CrossOrigin
     @ResponseBody
     @RequestMapping(value = "/remove")

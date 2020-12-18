@@ -4,6 +4,21 @@
     <list default="true" id="71c97931-6f93-4da2-b75c-e0abf7df0a9f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/D:/log/sys.log" beforeDir="false" afterPath="$PROJECT_DIR$/D:/log/sys.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Bean/SqlBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Bean/SqlBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Dao/CategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Dao/CategoryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/DataScreenApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/DataScreenApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/SqlController/SQLToBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/SqlController/SQLToBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/SqlController/SqlService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/SqlController/SqlService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/Timer/SendMessageToWeb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/Timer/SendMessageToWeb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/software/nju/WebSocket/WebsocketServerEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/software/nju/WebSocket/WebsocketServerEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/Bean/SqlBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/Bean/SqlBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/DataScreenApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/DataScreenApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/SqlController/SQLToBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/SqlController/SQLToBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/SqlController/SqlService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/SqlController/SqlService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/Timer/SendMessageToWeb.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/Timer/SendMessageToWeb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/software/nju/WebSocket/WebsocketServerEndpoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/software/nju/WebSocket/WebsocketServerEndpoint.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +84,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HeBeiScreen/baseframework" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../金融局项目/zxjkgl" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -198,7 +213,12 @@
       <workItem from="1607480243194" duration="19904000" />
       <workItem from="1607563310831" duration="3002000" />
       <workItem from="1607647240019" duration="6354000" />
-      <workItem from="1607849652061" duration="17988000" />
+      <workItem from="1607849652061" duration="19926000" />
+      <workItem from="1607937643971" duration="625000" />
+      <workItem from="1607993121688" duration="8647000" />
+      <workItem from="1608085075741" duration="3073000" />
+      <workItem from="1608166150327" duration="17850000" />
+      <workItem from="1608255825308" duration="5694000" />
     </task>
     <servers />
   </component>
@@ -225,6 +245,11 @@
           <url>jar://$MAVEN_REPOSITORY$/org/mongodb/mongo-java-driver/3.11.2/mongo-java-driver-3.11.2.jar!/com/mongodb/internal/validator/CollectibleDocumentFieldNameValidator.class</url>
           <line>18</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/software/nju/Controller/CategoryController.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>jar://$MAVEN_REPOSITORY$/org/mongodb/mongo-java-driver/3.11.2/mongo-java-driver-3.11.2.jar!/com/mongodb/client/internal/MongoCollectionImpl.class</url>

@@ -83,14 +83,14 @@ public class SqlService {
     public Map<Object,Object> getList(String sqls,String url,String des, String params, String api) throws SQLException {
         List<Map<String,String>> list = new ArrayList<>();
         Map<Object,Object> res = new HashMap<>();
-        String[] param;
+        List<String> param = new ArrayList<>();
         if(params!=null){
-            param = params.split(",");
+            param = Arrays.asList(params.split(","));
         }
         if(api.equals(ApiEnum.getValueByApi("JHApi"))){
-            list = sqlToBean.getJHList(sqls);
+            list = sqlToBean.getJHList(sqls,param);
         }else if(api.equals(ApiEnum.getValueByApi("XFApi"))) {
-            list = sqlToBean.getGYList(sqls);
+            list = sqlToBean.getGYList(sqls,param);
         }
         res.put("url",url);
         res.put("description",des);

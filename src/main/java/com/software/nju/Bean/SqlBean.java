@@ -23,7 +23,7 @@ import java.util.List;
 //alter table sql_bean modify column Sql_string text;
 public class SqlBean {
     @Id
-    private String id;
+    private Integer id;
 
     //sql语句
     private String sqlString;

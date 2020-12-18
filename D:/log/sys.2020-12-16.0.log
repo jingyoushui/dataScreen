@@ -1,0 +1,1024 @@
+2020-12-16 12:18:50 [main] INFO  com.software.nju.DataScreenApplication -Starting DataScreenApplication on mysoul with PID 22829 (/home/lixing/IdeaProjects/dataScreen/target/classes started by lixing in /home/lixing/IdeaProjects/dataScreen)
+2020-12-16 12:18:50 [main] INFO  com.software.nju.DataScreenApplication -The following profiles are active: dev
+2020-12-16 12:18:50 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-16 12:18:51 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 46ms. Found 5 JPA repository interfaces.
+2020-12-16 12:18:51 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-16 12:18:51 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8211 (http)
+2020-12-16 12:18:51 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -Initializing ProtocolHandler ["http-nio-8211"]
+2020-12-16 12:18:51 [main] INFO  org.apache.catalina.core.StandardService -Starting service [Tomcat]
+2020-12-16 12:18:51 [main] INFO  org.apache.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-12-16 12:18:51 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2020-12-16 12:18:51 [main] INFO  org.springframework.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 919 ms
+2020-12-16 12:18:51 [main] INFO  com.alibaba.druid.pool.DruidDataSource -{dataSource-1} inited
+2020-12-16 12:18:51 [main] INFO  org.hibernate.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-16 12:18:51 [main] INFO  org.hibernate.Version -HHH000412: Hibernate Core {5.4.10.Final}
+2020-12-16 12:18:51 [main] INFO  org.hibernate.annotations.common.Version -HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-12-16 12:18:51 [main] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-12-16 12:18:52 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-16 12:18:52 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-16 12:18:52 [main] INFO  com.software.nju.SqlController.connection.ConnectionPoolUtils -创建静海数据库连接池
+2020-12-16 12:18:52 [main] INFO  com.software.nju.SqlController.connection.ConnectionPoolUtils -创建高院数据库连接池
+2020-12-16 12:18:52 [main] INFO  com.software.nju.SqlController.SQLHelper -获取高院连接：com.sybase.jdbc4.jdbc.SybConnection@31aab981
+2020-12-16 12:18:52 [main] INFO  com.software.nju.SqlController.SQLHelper -获取静海连接：com.sybase.jdbc4.jdbc.SybConnection@4d518c66
+2020-12-16 12:18:52 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-16 12:18:52 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-16 12:18:53 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler -Initializing ExecutorService 'taskScheduler'
+2020-12-16 12:18:53 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -Starting ProtocolHandler ["http-nio-8211"]
+2020-12-16 12:18:53 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer -Tomcat started on port(s): 8211 (http) with context path ''
+2020-12-16 12:18:53 [main] INFO  com.software.nju.DataScreenApplication -Started DataScreenApplication in 2.992 seconds (JVM running for 3.327)
+2020-12-16 14:23:00 [http-nio-8211-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-16 14:23:00 [http-nio-8211-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet -Initializing Servlet 'dispatcherServlet'
+2020-12-16 14:23:00 [http-nio-8211-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet -Completed initialization in 7 ms
+2020-12-16 14:24:31 [http-nio-8211-exec-8] INFO  com.software.nju.WebSocket.WebsocketServerEndpoint -onOpen >> 链接成功
+2020-12-16 14:24:31 [http-nio-8211-exec-8] INFO  com.software.nju.WebSocket.WebsocketServerEndpoint -有新窗口开始监听：1, 当前在线人数为：1
+2020-12-16 14:24:31 [http-nio-8211-exec-8] ERROR com.software.nju.WebSocket.WebsocketServerEndpoint -java.lang.NullPointerException
+2020-12-16 14:24:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:29:39 [http-nio-8211-exec-10] INFO  com.software.nju.WebSocket.WebsocketServerEndpoint -onOpen >> 链接成功
+2020-12-16 14:29:39 [http-nio-8211-exec-10] INFO  com.software.nju.WebSocket.WebsocketServerEndpoint -有新窗口开始监听：1, 当前在线人数为：2
+2020-12-16 14:29:39 [http-nio-8211-exec-10] ERROR com.software.nju.WebSocket.WebsocketServerEndpoint -java.lang.NullPointerException
+2020-12-16 14:29:47 [http-nio-8211-exec-1] INFO  com.software.nju.WebSocket.WebsocketServerEndpoint -onClose >> 链接关闭
+2020-12-16 14:29:47 [http-nio-8211-exec-1] INFO  com.software.nju.WebSocket.WebsocketServerEndpoint -链接关闭，当前在线人数：1
+2020-12-16 14:40:19 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ006: ���������IOException: com.sybase.jdbc4.jdbc.SybConnectionDeadException: JZ0C0: ������������������
+2020-12-16 14:40:19 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:40:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:40:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:40:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:40:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:40:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:40:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:40:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:40:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:40:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:40:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:40:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:40:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:40:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:40:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:40:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:40:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:41:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:41:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:41:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:41:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:41:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:41:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:41:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:41:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:41:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:41:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:41:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:41:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:41:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:41:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:41:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:41:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:41:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:41:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:41:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:41:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:41:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:41:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:41:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:41:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:42:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:42:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:42:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:42:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:42:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:42:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:42:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:42:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:42:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:42:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:42:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:42:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:42:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:42:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:42:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:42:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:42:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:42:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:42:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:42:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:42:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:42:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:42:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:42:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:43:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:43:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:43:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:43:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:43:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:43:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:43:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:43:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:43:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:43:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:43:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:43:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:43:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:43:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:43:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:43:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:43:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:43:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:43:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:43:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:43:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:43:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:43:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:43:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:44:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:44:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:44:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:44:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:44:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:44:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:44:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:44:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:44:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:44:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:44:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:44:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:44:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:44:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:44:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:44:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:44:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:44:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:44:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:44:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:44:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:44:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:44:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:44:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:45:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:45:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:45:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:45:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:45:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:45:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:45:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:45:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:45:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:45:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:45:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:45:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:45:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:45:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:45:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:45:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:45:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:45:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:45:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:45:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:45:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:45:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:45:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:45:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:46:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:46:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:46:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:46:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:46:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:46:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:46:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:46:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:46:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:46:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:46:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:46:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:46:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:46:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:46:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:46:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:46:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:46:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:46:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:46:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:46:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:46:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:46:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:46:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:47:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:47:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:47:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:47:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:47:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:47:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:47:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:47:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:47:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:47:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:47:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:47:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:47:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:47:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:47:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:47:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:47:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:47:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:47:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:47:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:47:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:47:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:47:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:47:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:48:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:48:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:48:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:48:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:48:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:48:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:48:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:48:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:48:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:48:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:48:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:48:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:48:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:48:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:48:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:48:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:48:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:48:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:48:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:48:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:48:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:48:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:48:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:48:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:49:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:49:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:49:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:49:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:49:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:49:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:49:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:49:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:49:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:49:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:49:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:49:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:49:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:49:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:49:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:49:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:49:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:49:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:49:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:49:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:49:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:49:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:49:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:49:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:50:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:50:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:50:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:50:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:50:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:50:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:50:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:50:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:50:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:50:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:50:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:50:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:50:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:50:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:50:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:50:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:50:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:50:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:50:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:50:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:50:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:50:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:50:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:50:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:51:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:51:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:51:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:51:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:51:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:51:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:51:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:51:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:51:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:51:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:51:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:51:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:51:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:51:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:51:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:51:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:51:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:51:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:51:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:51:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:51:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:51:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:51:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:51:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:52:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:52:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:52:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:52:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:52:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:52:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:52:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:52:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:52:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:52:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:52:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:52:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:52:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:52:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:52:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:52:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:52:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:52:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:52:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:52:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:52:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:52:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:52:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:52:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:53:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:53:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:53:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:53:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:53:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:53:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:53:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:53:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:53:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:53:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:53:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:53:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:53:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:53:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:53:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:53:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:53:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:53:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:53:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:53:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:53:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:53:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:53:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:53:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:54:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:54:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:54:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:54:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:54:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:54:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:54:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:54:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:54:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:54:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:54:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:54:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:54:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:54:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:54:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:54:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:54:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:54:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:54:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:54:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:54:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:54:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:54:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:54:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:55:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:55:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:55:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:55:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:55:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:55:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:55:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:55:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:55:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:55:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:55:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:55:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:55:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:55:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:55:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:55:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:55:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:55:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:55:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:55:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:55:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:55:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:55:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:55:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:56:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:56:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:56:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:56:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:56:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:56:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:56:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:56:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:56:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:56:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:56:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:56:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:56:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:56:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:56:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:56:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:56:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:56:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:56:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:56:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:56:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:56:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:56:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:56:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:57:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:57:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:57:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:57:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:57:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:57:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:57:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:57:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:57:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:57:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:57:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:57:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:57:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:57:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:57:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:57:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:57:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:57:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:57:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:57:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:57:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:57:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:57:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:57:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:58:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:58:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:58:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:58:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:58:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:58:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:58:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:58:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:58:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:58:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:58:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:58:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:58:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:58:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:58:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:58:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:58:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:58:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:58:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:58:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:58:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:58:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:58:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:58:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:59:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:59:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:59:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:59:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:59:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:59:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:59:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:59:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:59:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:59:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:59:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:59:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:59:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:59:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:59:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:59:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:59:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:59:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:59:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:59:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 14:59:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 14:59:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 14:59:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 14:59:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:00:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:00:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:00:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:00:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:00:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:00:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:00:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:00:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:00:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:00:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:00:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:00:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:00:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:00:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:00:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:00:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:00:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:00:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:00:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:00:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:00:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:00:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:00:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:00:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:01:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:01:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:01:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:01:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:01:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:01:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:01:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:01:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:01:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:01:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:01:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:01:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:01:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:01:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:01:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:01:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:01:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:01:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:01:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:01:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:01:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:01:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:01:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:01:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:02:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:02:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:02:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:02:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:02:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:02:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:02:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:02:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:02:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:02:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:02:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:02:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:02:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:02:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:02:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:02:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:02:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:02:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:02:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:02:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:02:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:02:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:02:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:02:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:03:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:03:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:03:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:03:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:03:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:03:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:03:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:03:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:03:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:03:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:03:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:03:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:03:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:03:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:03:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:03:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:03:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:03:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:03:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:03:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:03:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:03:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:03:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:03:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:04:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:04:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:04:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:04:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:04:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:04:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:04:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:04:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:04:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:04:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:04:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:04:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:04:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:04:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:04:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:04:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:04:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:04:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:04:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:04:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:04:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:04:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:04:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:04:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:05:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:05:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:05:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:05:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:05:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:05:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:05:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:05:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:05:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:05:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:05:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:05:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:05:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:05:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:05:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:05:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:05:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:05:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:05:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:05:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:05:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:05:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:05:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:05:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:06:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:06:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:06:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:06:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:06:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:06:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:06:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:06:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:06:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:06:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:06:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:06:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:06:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:06:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:06:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:06:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:06:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:06:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:06:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:06:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:06:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:06:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:06:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:06:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:07:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:07:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:07:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:07:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:07:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:07:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:07:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:07:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:07:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:07:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:07:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:07:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:07:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:07:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:07:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:07:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:07:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:07:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:07:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:07:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:07:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:07:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:07:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:07:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:08:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:08:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:08:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:08:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:08:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:08:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:08:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:08:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:08:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:08:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:08:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:08:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:08:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:08:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:08:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:08:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:08:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:08:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:08:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:08:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:08:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:08:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:08:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:08:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:09:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:09:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:09:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:09:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:09:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:09:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:09:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:09:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:09:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:09:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:09:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:09:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:09:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:09:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:09:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:09:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:09:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:09:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:09:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:09:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:09:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:09:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:09:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:09:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:10:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:10:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:10:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:10:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:10:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:10:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:10:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:10:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:10:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:10:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:10:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:10:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:10:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:10:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:10:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:10:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:10:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:10:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:10:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:10:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:10:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:10:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:10:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:10:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:11:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:11:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:11:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:11:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:11:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:11:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:11:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:11:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:11:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:11:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:11:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:11:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:11:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:11:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:11:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:11:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:11:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:11:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:11:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:11:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:11:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:11:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:11:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:11:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:12:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:12:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:12:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:12:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:12:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:12:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:12:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:12:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:12:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:12:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:12:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:12:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:12:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:12:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:12:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:12:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:12:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:12:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:12:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:12:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:12:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:12:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:12:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:12:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:13:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:13:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:13:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:13:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:13:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:13:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:13:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:13:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:13:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:13:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:13:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:13:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:13:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:13:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:13:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:13:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:13:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:13:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:13:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:13:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:13:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:13:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:13:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:13:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:14:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:14:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:14:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:14:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:14:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:14:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:14:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:14:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:14:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:14:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:14:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:14:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:14:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:14:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:14:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:14:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:14:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:14:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:14:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:14:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:14:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:14:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:14:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:14:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:15:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:15:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:15:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:15:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:15:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:15:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:15:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:15:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:15:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:15:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:15:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:15:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:15:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:15:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:15:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:15:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:15:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:15:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:15:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:15:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:15:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:15:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:15:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:15:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:16:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:16:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:16:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:16:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:16:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:16:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:16:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:16:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:16:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:16:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:16:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:16:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:16:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:16:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:16:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:16:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:16:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:16:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:16:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:16:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:16:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:16:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:16:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:16:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:17:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:17:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:17:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:17:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:17:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:17:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:17:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:17:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:17:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:17:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:17:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:17:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:17:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:17:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:17:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:17:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:17:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:17:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:17:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:17:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:17:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:17:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:17:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:17:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:18:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:18:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:18:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:18:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:18:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:18:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:18:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:18:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:18:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:18:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:18:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:18:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:18:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:18:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:18:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:18:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:18:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:18:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:18:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:18:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:18:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:18:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:18:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:18:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:19:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:19:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:19:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:19:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:19:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:19:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:19:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:19:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:19:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:19:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:19:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:19:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:19:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:19:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:19:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:19:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:19:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:19:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:19:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:19:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:19:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:19:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:19:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:19:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:20:00 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:20:00 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:20:00 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:20:00 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:20:10 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:20:10 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:20:10 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:20:10 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:20:20 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:20:20 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:20:20 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:20:20 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:20:30 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:20:30 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:20:30 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:20:30 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:20:40 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:20:40 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:20:40 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:20:40 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:20:50 [scheduling-1] INFO  com.software.nju.Timer.SendMessageToWeb -发送数据
+2020-12-16 15:20:50 [scheduling-1] WARN  com.software.nju.SqlController.SQLHelper -java.sql.SQLException: JZ0C0: ������������������
+2020-12-16 15:20:50 [scheduling-1] INFO  com.software.nju.SqlController.SQLHelper -静海stmt为空
+2020-12-16 15:20:50 [scheduling-1] ERROR com.software.nju.Timer.SendMessageToWeb -java.lang.NullPointerException
+2020-12-16 15:20:56 [http-nio-8211-exec-5] INFO  com.software.nju.WebSocket.WebsocketServerEndpoint -onClose >> 链接关闭
+2020-12-16 15:20:56 [http-nio-8211-exec-5] INFO  com.software.nju.WebSocket.WebsocketServerEndpoint -链接关闭，当前在线人数：0
+2020-12-16 15:22:17 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler -Shutting down ExecutorService 'taskScheduler'
+2020-12-16 15:22:17 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-16 15:22:17 [SpringContextShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-16 15:22:17 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource -{dataSource-1} closed

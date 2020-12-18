@@ -32,7 +32,7 @@ public class SQLToBean {
         return number;
     }
 
-    public List<Map<String, String>> getJHList(String sql) throws SQLException {
+    public List<Map<String, String>> getJHList(String sql,List<String> parms) throws SQLException {
         List<Map<String, String>> list = new ArrayList<>();
         ResultSet rs = SQLHelper.getJHResultSet(JHconnection,sql);
         ResultSetMetaData md = rs.getMetaData();
@@ -41,7 +41,11 @@ public class SQLToBean {
         while (rs.next()) { //rowData = new HashMap(columnCount);
             HashMap rowData = new HashMap<String, String>();
             for (int i = 1; i <= columnCount; i++) {
-                rowData.put(md.getColumnName(i), rs.getObject(i)+"");
+                if(parms.size()==0){
+                    rowData.put(md.getColumnName(i),rs.getObject(i)+"");
+                }else{
+                    rowData.put(parms.get(i-1), rs.getObject(i)+"");
+                }
             }
             list.add(rowData);
         }
@@ -58,7 +62,7 @@ public class SQLToBean {
         return number;
     }
 
-    public List<Map<String, String>> getGYList(String sql) throws SQLException {
+    public List<Map<String, String>> getGYList(String sql,List<String> parms) throws SQLException {
         List<Map<String, String>> list = new ArrayList<>();
         ResultSet rs = SQLHelper.getGYResultSet(GYconnection,sql);
         ResultSetMetaData md = rs.getMetaData();
@@ -67,7 +71,11 @@ public class SQLToBean {
         while (rs.next()) { //rowData = new HashMap(columnCount);
             HashMap rowData = new HashMap<String, String>();
             for (int i = 1; i <= columnCount; i++) {
-                rowData.put(md.getColumnName(i), rs.getObject(i)+"");
+                if(parms.size()==0){
+                    rowData.put(md.getColumnName(i),rs.getObject(i)+"");
+                }else{
+                    rowData.put(parms.get(i-1), rs.getObject(i)+"");
+                }
             }
             list.add(rowData);
         }

@@ -1,22 +1,25 @@
 package com.software.nju.WebSocket;
 
-import com.alibaba.druid.support.json.JSONUtils;
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
+import com.software.nju.Service.SendMessageSercice;
+import com.software.nju.Timer.SendMessageToWeb;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
 import javax.websocket.*;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
-import java.util.Map;
 import java.util.concurrent.CopyOnWriteArraySet;
 
 @Slf4j
 @Component
 @ServerEndpoint(value = "/websocket/{id}",encoders = {ServerEncoder.class})
 public class WebsocketServerEndpoint {
+
+    private static SendMessageSercice sendMessageSercice;
 
     //在线连接数,应该把它设计成线程安全的
     private static int onlineCount = 0;
@@ -32,6 +35,13 @@ public class WebsocketServerEndpoint {
     //会话窗口的ID标识
     private String id = "";
 
+
+
+    @Autowired
+    public void setSendMessageSercice(SendMessageSercice sendMessageSercice){
+        this.sendMessageSercice = sendMessageSercice;
+    }
+
     /**
      * 链接成功调用的方法
      *
@@ -40,6 +50,7 @@ public class WebsocketServerEndpoint {
      */
     @OnOpen
     public void onOpen(Session session, @PathParam("id") String id) {
+
         log.info("onOpen >> 链接成功");
         this.session = session;
 
@@ -54,10 +65,10 @@ public class WebsocketServerEndpoint {
         this.id = id;
 
         try {
-            sendMessage("有新窗口开始监听：" + id + ", 当前在线人数为：" + getOnlineCount());
+            sendMessageSercice.sendDataToWeb();
 
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error(e.toString());
         }
 
 
@@ -155,7 +166,6 @@ public class WebsocketServerEndpoint {
                 if (id == null) {
                     endpoint.sendObject(map);
                 } else if (endpoint.id.equals(id)) {
-//                    log.info("推送消息到窗口：" + id + " ，推送内容：" + map);
                     String str= JSON.toJSON(map).toString();
                     System.out.println(str);
                     endpoint.sendObject(str);
