@@ -21,8 +21,8 @@ public class SendMessageSercice {
     SqlBeanService sqlBeanService;
 
 
-    public void sendDataToWeb() throws SQLException {
-        List<SqlBean> sqlList = sqlBeanService.getAll();
+    public void sendDataToWeb(String id) throws SQLException {
+        List<SqlBean> sqlList = sqlBeanService.findSqlBeansByWebsocketId(id);
         List<Object> list = new ArrayList<>();
         for(SqlBean sqlBean:sqlList){
             String sqlApi = sqlBean.getSqlApi();
@@ -45,6 +45,6 @@ public class SendMessageSercice {
 
         }
 
-        WebsocketServerEndpoint.sendData(null,list);
+        WebsocketServerEndpoint.sendData(id,list);
     }
 }

@@ -38,4 +38,6 @@ public class SqlBean {
 
     private String sqlType;
 
+    private String websocketId;
+
 }

@@ -12,6 +12,9 @@ import javax.websocket.*;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArraySet;
 
 @Slf4j
@@ -26,8 +29,8 @@ public class WebsocketServerEndpoint {
 
     //concurrent包的线程安全Set，用来存放每个客户端对应的MyWebSocket对象。
     //虽然@Component默认是单例模式的，但springboot还是会为每个websocket连接初始化一个bean，所以可以用一个静态set保存起来。
-    public static CopyOnWriteArraySet<WebsocketServerEndpoint> websocketServerSet
-            = new CopyOnWriteArraySet<>();
+    public static ConcurrentHashMap<String, List<WebsocketServerEndpoint>> websocketServerMap
+            = new ConcurrentHashMap<>();
 
     //与某个客户端的连接会话，需要通过它来给客户端发送数据
     private Session session;
@@ -55,17 +58,18 @@ public class WebsocketServerEndpoint {
         this.session = session;
 
         //将当前websocket对象存入到Set集合中
-        websocketServerSet.add(this);
+        if(!websocketServerMap.containsKey(id)){
+            websocketServerMap.put(id,new ArrayList<>());
+        }
+        websocketServerMap.get(id).add(this);
 
         //在线人数+1
         addOnlineCount();
-
-        log.info("有新窗口开始监听：" + id + ", 当前在线人数为：" + getOnlineCount());
-
+        log.info("当前在线人数为：" + getOnlineCount());
         this.id = id;
 
         try {
-            sendMessageSercice.sendDataToWeb();
+            sendMessageSercice.sendDataToWeb(id);
 
         } catch (Exception e) {
             log.error(e.toString());
@@ -82,7 +86,7 @@ public class WebsocketServerEndpoint {
         log.info("onClose >> 链接关闭");
 
         //移除当前Websocket对象
-        websocketServerSet.remove(this);
+        websocketServerMap.get(id).remove(this);
 
         //在内线人数-1
         subOnLineCount();
@@ -94,14 +98,14 @@ public class WebsocketServerEndpoint {
      * 收到客户端消息后调用的方法
      *
      * @param message
-     * @param session
+     *
      */
     @OnMessage
-    public void onMessage(String message, Session session) {
+    public void onMessage(String message) {
         log.info("接收到窗口：" + id + " 的信息：" + message);
 
         //发送信息
-        for (WebsocketServerEndpoint websocketServerEndpoint : websocketServerSet) {
+        for (WebsocketServerEndpoint websocketServerEndpoint : websocketServerMap.get(id)) {
             try {
                 websocketServerEndpoint.sendMessage("接收到窗口：" + id + " 的信息：" + message);
             } catch (Exception e) {
@@ -138,7 +142,7 @@ public class WebsocketServerEndpoint {
         if(id==null){
             log.info( "群发数据，推送内容：" + message);
         }
-        for (WebsocketServerEndpoint endpoint : websocketServerSet) {
+        for (WebsocketServerEndpoint endpoint : websocketServerMap.get(id)) {
             try {
                 if (id == null) {
                     endpoint.sendMessage(message);
@@ -161,15 +165,9 @@ public class WebsocketServerEndpoint {
      * @param id
      */
     public static void sendData(String id, Object map) {
-        for (WebsocketServerEndpoint endpoint : websocketServerSet) {
+        for (WebsocketServerEndpoint endpoint : websocketServerMap.get(id)) {
             try {
-                if (id == null) {
                     endpoint.sendObject(map);
-                } else if (endpoint.id.equals(id)) {
-                    String str= JSON.toJSON(map).toString();
-                    System.out.println(str);
-                    endpoint.sendObject(str);
-                }
             } catch (Exception e) {
                 e.printStackTrace();
                 continue;

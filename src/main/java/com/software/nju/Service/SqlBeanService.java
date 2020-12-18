@@ -18,4 +18,8 @@ public class SqlBeanService {
     public List<SqlBean> getAll(){
         return sqlBeanDao.findAll();
     }
+
+    public List<SqlBean> findSqlBeansByWebsocketId(String id){
+        return sqlBeanDao.findSqlBeansByWebsocketId(id);
+    }
 }

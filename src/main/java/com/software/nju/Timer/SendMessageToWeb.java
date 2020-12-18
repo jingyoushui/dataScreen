@@ -18,13 +18,16 @@ public class SendMessageToWeb {
 
     @Scheduled(cron = "0 0/1 * * * ?")
     public void sendTestMessage() {
-        if(WebsocketServerEndpoint.websocketServerSet.size()>0){
+        if(WebsocketServerEndpoint.websocketServerMap.size()>0){
             log.info("发送数据");
-            try{
-                sendMessageSercice.sendDataToWeb();
-            }catch (Exception e){
-                e.printStackTrace();
+            for(String id :WebsocketServerEndpoint.websocketServerMap.keySet()){
+                try{
+                    sendMessageSercice.sendDataToWeb(id);
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
             }
+
 
 
         }
