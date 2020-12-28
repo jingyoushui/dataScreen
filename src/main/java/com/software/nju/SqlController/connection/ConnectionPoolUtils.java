@@ -18,7 +18,8 @@ public class ConnectionPoolUtils {
                     "com.sybase.jdbc4.jdbc.SybDriver",
                     "jdbc:sybase:Tds:130.20.1.1:5000/JUDGE?charset=cp936",
                     "fymis",
-                    "nju362225L572L2L55");
+                    "nju362225L572L2L55",
+                    "answer");
             try {
                 poolInstance.createPool();
             } catch (Exception e) {
@@ -36,7 +37,8 @@ public class ConnectionPoolUtils {
                     "com.sybase.jdbc4.jdbc.SybDriver",
                     "jdbc:sybase:Tds:130.1.1.27:5000/XF?charset=cp936",
                     "sa",
-                    "xieche");
+                    "xieche",
+                    "DB_FKXX");
             try {
                 GYpoolInstance.createPool();
             } catch (Exception e) {

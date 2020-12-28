@@ -4,7 +4,6 @@ import com.alibaba.fastjson.JSONObject;
 import com.software.nju.Bean.Map;
 import com.software.nju.Model.MapData;
 import com.software.nju.Model.Response;
-import com.software.nju.Model.VisualData;
 import com.software.nju.Service.MapService;
 import com.software.nju.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;

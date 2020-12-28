@@ -1,5 +1,7 @@
 package com.software.nju.SqlController.connection;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.logging.Logger;
 
 import java.sql.Connection;
@@ -11,6 +13,7 @@ import java.sql.Statement;
 import java.util.Enumeration;
 import java.util.Vector;
 
+@Slf4j
 public class ConnectionPool {
     private String jdbcDriver = ""; // 数据库驱动
     private String dbUrl = ""; // 数据 URL
@@ -23,7 +26,7 @@ public class ConnectionPool {
     private int maxConnections = 5; // 连接池最大的大小
     private Vector connections = null; // 存放连接池中数据库连接的向量 , 初始时为 null
     // 它中存放的对象为 PooledConnection 型
-    private static Logger logger = Logger.getLogger(ConnectionPool.class.getName());
+
     /**
      * 构造函数
      *
@@ -38,11 +41,12 @@ public class ConnectionPool {
      *
      */
     public ConnectionPool(String jdbcDriver, String dbUrl, String dbUsername,
-                          String dbPassword) {
+                          String dbPassword,String testTable) {
         this.jdbcDriver = jdbcDriver;
         this.dbUrl = dbUrl;
         this.dbUsername = dbUsername;
         this.dbPassword = dbPassword;
+        this.testTable = testTable;
     }
 
     /**
@@ -159,7 +163,7 @@ public class ConnectionPool {
             try {
                 connections.addElement(new PooledConnection(newConnection()));
             } catch (SQLException e) {
-                logger.warning(" 创建数据库连接失败！ " + e.getMessage());
+                log.error(" 创建数据库连接失败！ " + e.getMessage());
                 throw new SQLException();
             }
             // System.out.println(" 数据库连接己创建 ......");
@@ -264,7 +268,7 @@ public class ConnectionPool {
                     try {
                         conn = newConnection();
                     } catch (SQLException e) {
-                        logger.info(" 创建数据库连接失败！ " + e.getMessage());
+                        log.info(" 创建数据库连接失败！ " + e.getMessage());
                         return null;
                     }
                     pConn.setConnection(conn);
@@ -314,7 +318,7 @@ public class ConnectionPool {
     public void returnConnection(Connection conn) {
         // 确保连接池存在，如果连接没有创建（不存在），直接返回
         if (connections == null) {
-            logger.warning(" 连接池不存在，无法返回此连接到连接池中 !");
+            log.error(" 连接池不存在，无法返回此连接到连接池中 !");
             return;
         }
         PooledConnection pConn = null;
@@ -339,7 +343,7 @@ public class ConnectionPool {
     public synchronized void refreshConnections() throws SQLException {
         // 确保连接池己创新存在
         if (connections == null) {
-            logger.warning(" 连接池不存在，无法刷新 !");
+            log.error(" 连接池不存在，无法刷新 !");
             return;
         }
         PooledConnection pConn = null;
@@ -365,7 +369,7 @@ public class ConnectionPool {
     public synchronized void closeConnectionPool() throws SQLException {
         // 确保连接池存在，如果不存在，返回
         if (connections == null) {
-            logger.warning(" 连接池不存在，无法关闭 !");
+            log.error(" 连接池不存在，无法关闭 !");
             return;
         }
         PooledConnection pConn = null;
@@ -395,7 +399,7 @@ public class ConnectionPool {
         try {
             conn.close();
         } catch (SQLException e) {
-            logger.warning(" 关闭数据库连接出错： " + e.getMessage());
+            log.error(" 关闭数据库连接出错： " + e.getMessage());
         }
     }
     /**

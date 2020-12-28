@@ -69,7 +69,7 @@ public class WebsocketServerEndpoint {
         this.id = id;
 
         try {
-            sendMessageSercice.sendDataToWeb(id);
+            sendMessageSercice.sendDataToWeb(id,this);
 
         } catch (Exception e) {
             log.error(e.toString());
@@ -109,14 +109,14 @@ public class WebsocketServerEndpoint {
             try {
                 websocketServerEndpoint.sendMessage("接收到窗口：" + id + " 的信息：" + message);
             } catch (Exception e) {
-                e.printStackTrace();
+                log.error(e.toString());
             }
         }
     }
 
     @OnError
     public void onError(Session session, Throwable e) {
-        e.printStackTrace();
+        log.error(e.getMessage());
     }
 
     /**
@@ -124,12 +124,22 @@ public class WebsocketServerEndpoint {
      *
      * @param message
      */
-    private void sendMessage(String message) throws IOException {
-        this.session.getBasicRemote().sendText(message);
+    private void sendMessage(String message) {
+        try{
+            this.session.getBasicRemote().sendText(message);
+        }catch (Exception e){
+            log.error(e.toString());
+        }
+
     }
 
-    private void sendObject(Object object) throws IOException, EncodeException {
-        this.session.getBasicRemote().sendObject(object);
+    private void sendObject(Object object){
+        try {
+            this.session.getBasicRemote().sendObject(object);
+        }catch (Exception e){
+            log.error(e.toString());
+        }
+
     }
 
     /**
@@ -164,15 +174,24 @@ public class WebsocketServerEndpoint {
      * @param map
      * @param id
      */
-    public static void sendData(String id, Object map) {
-        for (WebsocketServerEndpoint endpoint : websocketServerMap.get(id)) {
-            try {
+    public static void sendData(String id, Object map,WebsocketServerEndpoint wse) {
+        if(wse==null){
+            for (WebsocketServerEndpoint endpoint : websocketServerMap.get(id)) {
+                try {
                     endpoint.sendObject(map);
-            } catch (Exception e) {
-                e.printStackTrace();
-                continue;
+                } catch (Exception e) {
+                    log.error(e.toString());
+                    continue;
+                }
+            }
+        }else{
+            try {
+                wse.sendObject(map);
+            }catch (Exception e){
+                log.error(e.toString());
             }
         }
+
     }
 
     private void subOnLineCount() {

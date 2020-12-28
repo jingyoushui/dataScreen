@@ -21,14 +21,14 @@ public class SqlService {
 
         Date t = new Date();
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-        String date = df.format(t).substring(0,8)+"01 00:00:00.000";
+        String date = df.format(t).substring(0,10)+" 00:00:00.000";
         //在写sql语句的时候，如果涉及到日期，如查询到目前为止的数据总数，日期部分用#代替，然后在这里替换成当前的时间
         sqlString = sqlString.replaceFirst("#",date);
 //        logger.info(sqlString);
-        List<String> param = new ArrayList<>();
-        if(params!=null){
-            param = Arrays.asList(params.split(","));
-        }
+//        List<String> param = new ArrayList<>();
+//        if(params!=null){
+//            param = Arrays.asList(params.split(","));
+//        }
         int count = 0;
         if(api.equals(ApiEnum.getValueByApi("JHApi"))){
             count = sqlToBean.getJHNumber(sqlString);
@@ -48,11 +48,11 @@ public class SqlService {
         Map<Object,Object> res = new HashMap<>();
         Date t = new Date();
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-        String date = df.format(t).substring(0,8)+"01 00:00:00.000";
+        String date = df.format(t).substring(0,10)+" 00:00:00.000";
         String sql = "";
         List<String> sqlString = new ArrayList<>();
         if(sqls!=null){
-            sqlString = Arrays.asList(sqls.split(","));
+            sqlString = Arrays.asList(sqls.split(";"));
         }
 
         List<String> param = new ArrayList<>();

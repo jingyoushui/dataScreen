@@ -1,7 +1,6 @@
 package com.software.nju.Service;
 
 import com.software.nju.Bean.SqlBean;
-import com.software.nju.Service.SqlBeanService;
 import com.software.nju.SqlController.SqlService;
 import com.software.nju.WebSocket.WebsocketServerEndpoint;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +20,7 @@ public class SendMessageSercice {
     SqlBeanService sqlBeanService;
 
 
-    public void sendDataToWeb(String id) throws SQLException {
+    public void sendDataToWeb(String id,WebsocketServerEndpoint wse) throws SQLException {
         List<SqlBean> sqlList = sqlBeanService.findSqlBeansByWebsocketId(id);
         List<Object> list = new ArrayList<>();
         for(SqlBean sqlBean:sqlList){
@@ -45,6 +44,6 @@ public class SendMessageSercice {
 
         }
 
-        WebsocketServerEndpoint.sendData(id,list);
+        WebsocketServerEndpoint.sendData(id,list,wse);
     }
 }

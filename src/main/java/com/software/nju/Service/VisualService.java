@@ -29,4 +29,14 @@ public class VisualService {
     public Integer remove(Integer id){
         return visualDao.removeVisualById(id);
     }
+
+    public List<Visual> getAll(){
+        return visualDao.findAll();
+    }
+
+    public int getCount(int category){
+        return visualDao.getCount(category);
+    }
+
+
 }

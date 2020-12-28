@@ -5,8 +5,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.software.nju.Bean.Config;
 import com.software.nju.Bean.Visual;
 import com.software.nju.Model.FileData;
+import com.software.nju.Model.PageData;
 import com.software.nju.Model.Response;
-import com.software.nju.Model.VisualData;
 import com.software.nju.Model.VisualDetail;
 import com.software.nju.Service.ConfigService;
 import com.software.nju.Service.VisualService;
@@ -26,11 +26,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.criteria.CriteriaBuilder;
+import java.awt.image.VolatileImage;
 import java.io.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Controller
 @RequestMapping(value = "/visual")
@@ -46,6 +44,25 @@ public class VisualController {
     ConfigService configService;
 
     private String fileurl = urlConfig.devfile;
+
+
+    @CrossOrigin
+    @ResponseBody
+    @RequestMapping(value = "/allList")
+    public Response getVisualAll(){
+        Response response = new Response();
+        List<Visual> list = visualService.getAll();
+        List<Map<String,String>> res = new ArrayList<>();
+        for(Visual visual:list){
+            Map<String,String> map = new HashMap<>();
+            map.put("label",visual.getTitle());
+            map.put("value",visual.getId()+"");
+            res.add(map);
+        }
+        response.setCode(200).setSuccess(true).setMsg("操作成功")
+                .setData(res);
+        return response;
+    }
 
 
     @CrossOrigin
@@ -72,8 +89,10 @@ public class VisualController {
         if(true){//权限认证 TODO
             Page<Visual> pagelist = visualService.findVisualByCategory(category,pageable);
             List<Visual> list = pagelist.getContent();
-            VisualData visualData = new VisualData();
-            visualData.setCurrent(1).setTotal(20).setSize(10).setPages(10).setHitCount(false)
+            PageData visualData = new PageData();
+            int total = visualService.getCount(category);
+
+            visualData.setCurrent(current).setTotal(total).setSize(size).setPages((int) Math.ceil((double)total/size)).setHitCount(false)
                     .setSearchCount(true).setRecords(list);
             response.setCode(200).setSuccess(true).setMsg("操作成功")
                     .setData(visualData);

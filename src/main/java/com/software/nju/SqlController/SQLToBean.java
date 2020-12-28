@@ -15,15 +15,9 @@ import java.util.Map;
 @Service
 public class SQLToBean {
 
-    /**
-     * 获取高院的数据库连接，如果是静海区的数据库，使用默认的连接，调用方法时候不需要传递connection
-     * 调用高院的数据库时，是需要调用带有connection形参的方法，将该connection传入
-     */
-    Connection GYconnection = SQLHelper.getGYConnection();
-    Connection JHconnection = SQLHelper.getJHConnection();
 
     public Integer getJHNumber(String sql) throws SQLException {
-        ResultSet res = SQLHelper.getJHResultSet(JHconnection,sql);
+        ResultSet res = SQLHelper.getJHResultSet(sql);
         Map<String, Integer> map = new HashMap<>();
         int number = 0;
         if (res.next()) {
@@ -34,7 +28,7 @@ public class SQLToBean {
 
     public List<Map<String, String>> getJHList(String sql,List<String> parms) throws SQLException {
         List<Map<String, String>> list = new ArrayList<>();
-        ResultSet rs = SQLHelper.getJHResultSet(JHconnection,sql);
+        ResultSet rs = SQLHelper.getJHResultSet(sql);
         ResultSetMetaData md = rs.getMetaData();
         int columnCount = md.getColumnCount(); //Map rowData;
 
@@ -53,7 +47,7 @@ public class SQLToBean {
     }
 
     public Integer getGYNumber(String sql) throws SQLException {
-        ResultSet res = SQLHelper.getGYResultSet(GYconnection,sql);
+        ResultSet res = SQLHelper.getGYResultSet(sql);
         Map<String, Integer> map = new HashMap<>();
         int number = 0;
         if (res.next()) {
@@ -64,7 +58,7 @@ public class SQLToBean {
 
     public List<Map<String, String>> getGYList(String sql,List<String> parms) throws SQLException {
         List<Map<String, String>> list = new ArrayList<>();
-        ResultSet rs = SQLHelper.getGYResultSet(GYconnection,sql);
+        ResultSet rs = SQLHelper.getGYResultSet(sql);
         ResultSetMetaData md = rs.getMetaData();
         int columnCount = md.getColumnCount(); //Map rowData;
 

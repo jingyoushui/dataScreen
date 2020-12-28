@@ -2,6 +2,7 @@ package com.software.nju.SqlController;
 
 import com.software.nju.SqlController.connection.ConnectionPool;
 import com.software.nju.SqlController.connection.ConnectionPoolUtils;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.sql.Statement;
@@ -10,16 +11,15 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
+@Slf4j
+@Component
 public class SQLHelper {
 
     //静海数据库
     static ConnectionPool JHconnPool= ConnectionPoolUtils.GetPoolInstance();//单例模式创建连接池对象
     //高院信访集中库
     static ConnectionPool GYconnPool= ConnectionPoolUtils.GetGYPoolInstance();//单例模式创建连接池对象
-    private static Logger logger = Logger.getLogger(SQLHelper.class.getName());
     /**
      * 不允许实例化该类
      */
@@ -36,7 +36,7 @@ public class SQLHelper {
     public static Connection getJHConnection() {
         try{
             Connection connection = JHconnPool.getConnection();
-            logger.info("获取静海连接："+connection);
+//            log.info("获取静海连接："+connection);
             return connection;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -49,7 +49,7 @@ public class SQLHelper {
     public static Connection getGYConnection() {
         try{
             Connection connection = GYconnPool.getConnection();
-            logger.info("获取高院连接："+connection);
+//            log.info("获取高院连接："+connection);
             return connection;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -75,7 +75,7 @@ public class SQLHelper {
                     ResultSet.CONCUR_UPDATABLE);
             // 设置数据集可以滚动,可以更新
         } catch (SQLException ex) {
-            logger.warning(ex.toString());
+            log.error(ex.toString());
             return null;
         }
     }
@@ -83,23 +83,22 @@ public class SQLHelper {
 
     /**
      * 返回一个 ResultSet
-     *
-     * @param conn
      * @param cmdText SQL 语句
      * @return
      */
-    public static ResultSet getGYResultSet(Connection conn, String cmdText) {
+    public static ResultSet getGYResultSet( String cmdText) {
+        Connection conn = getGYConnection();
         Statement stmt = getStatement(conn);
         ResultSet res = null;
 //        logger.info("使用高院连接："+conn.toString());
         if (stmt == null) {
-            logger.info("高院stmt为空");
+            log.info("高院stmt为空");
             return null;
         }
         try {
             res =  ((java.sql.Statement) stmt).executeQuery(cmdText);
         } catch (SQLException ex) {
-            logger.warning(ex.toString());
+            log.error(ex.toString());
         }finally {
             closeGYConnection(conn);
         }
@@ -108,23 +107,22 @@ public class SQLHelper {
 
     /**
      * 返回一个 ResultSet
-     *
-     * @param conn
      * @param cmdText SQL 语句
      * @return
      */
-    public static ResultSet getJHResultSet(Connection conn, String cmdText) {
+    public static ResultSet getJHResultSet( String cmdText) {
+        Connection conn = getJHConnection();
         Statement stmt = getStatement(conn);
         ResultSet res = null;
 //        logger.info("使用静海连接："+conn.toString());
         if (stmt == null) {
-            logger.info("静海stmt为空");
+            log.info("静海stmt为空");
             return null;
         }
         try {
             res =  ((java.sql.Statement) stmt).executeQuery(cmdText);
         } catch (SQLException ex) {
-            logger.warning(ex.toString());
+            log.error(ex.toString());
         }finally {
             closeJHConnection(conn);
         }
@@ -152,7 +150,8 @@ public class SQLHelper {
             }
 //            logger.info("关闭静海连接："+obj);
         } catch (SQLException ex) {
-            logger.warning(ex.toString());
+            log.error(ex.toString());
+            ex.printStackTrace();
         }
     }
 
@@ -172,7 +171,8 @@ public class SQLHelper {
             }
 //            logger.info("关闭高院连接："+obj);
         } catch (SQLException ex) {
-            logger.warning(ex.toString());
+            log.error(ex.toString());
+            ex.printStackTrace();
         }
     }
 }
